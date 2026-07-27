@@ -1,19 +1,14 @@
 import { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
-import { useLanguage } from '../context/LanguageContext'
-import { t } from '../utils/translations'
 import { WORLD_RANGES } from '../utils/constants'
 
 export default function ScrollOverlay({ scroll }) {
-  const { lang, toggleLang } = useLanguage()
   const [activeIdx, setActiveIdx] = useState(0)
   const [showHint, setShowHint] = useState(true)
   const [showNav, setShowNav] = useState(false)
   const prevIdxRef = useRef(-1)
   const prevHintRef = useRef(true)
-
-  const worlds = WORLD_RANGES.map((_, i) => t(lang, `worlds.${i}`))
 
   useFrame(() => {
     const offset = scroll.offset
@@ -45,8 +40,8 @@ export default function ScrollOverlay({ scroll }) {
   return (
     <Html fullscreen>
       <div className="overlay">
-        {worlds.map((w, i) => (
-          <div key={i}>
+        {WORLD_RANGES.map((w, i) => (
+          <div key={w.id}>
             <div
               className="world-title"
               style={{
@@ -65,32 +60,22 @@ export default function ScrollOverlay({ scroll }) {
           </div>
         ))}
 
-        <button
-          onClick={toggleLang}
-          className="lang-switch"
-          style={{ opacity: showNav ? 1 : 0 }}
-        >
-          {t(lang, 'langSwitch')}
-        </button>
-
         <div
           className="nav-dots"
           style={{ opacity: showNav ? 1 : 0, transition: 'opacity 0.5s ease' }}
         >
-          {worlds.map((w, i) => (
+          {WORLD_RANGES.map((w, i) => (
             <div
-              key={i}
+              key={w.id}
               className={`nav-dot ${i === activeIdx ? 'active' : ''}`}
             />
           ))}
-          <div className="nav-label">
-            {t(lang, 'navLabel')} {activeIdx + 1}
-          </div>
+          <div className="nav-label">{WORLD_RANGES[activeIdx].label}</div>
         </div>
 
         <div className="scroll-hint" style={{ opacity: showHint ? 1 : 0 }}>
           <div className="arrow" />
-          <span>{t(lang, 'scrollHint')}</span>
+          <span>Scroll to explore</span>
         </div>
       </div>
     </Html>
