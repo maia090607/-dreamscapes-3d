@@ -407,23 +407,36 @@ canvas {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
-  font-size: 0.85rem;
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 12px 32px;
+  font-size: 0.88rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 14px 36px;
   border-radius: 100px;
   transition: all 0.3s ease;
   pointer-events: auto;
   letter-spacing: 0.04em;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.05);
+  font-weight: 500;
+}
+
+.project-footer .project-link:first-child {
+  border-color: rgba(168, 85, 247, 0.25);
+  background: rgba(168, 85, 247, 0.08);
 }
 
 .project-footer .project-link:hover {
   color: #fff;
-  border-color: rgba(255,255,255,0.25);
-  background: rgba(255,255,255,0.08);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transform: translateY(-1px);
+}
+
+.project-footer .project-link:first-child:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  background: rgba(168, 85, 247, 0.15);
+  box-shadow: 0 4px 25px rgba(168, 85, 247, 0.15);
 }
 
 /* ─── Responsive ─── */
