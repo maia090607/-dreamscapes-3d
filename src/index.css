@@ -155,7 +155,7 @@ canvas {
   align-items: center;
   padding: 80px 24px;
   position: relative;
-  background: linear-gradient(180deg, transparent 0%, rgba(5,5,16,0.4) 20%, rgba(5,5,16,0.85) 50%, #050510 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(5,5,16,0.6) 15%, rgba(5,5,16,0.9) 35%, #050510 60%, #030308 100%);
 }
 
 .project-card {
