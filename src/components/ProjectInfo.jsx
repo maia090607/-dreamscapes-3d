@@ -73,6 +73,15 @@ export default function ProjectInfo() {
           </div>
         </div>
 
+        <div className="project-video">
+          <h3>Demo Video</h3>
+          <video
+            src="/video/demo.mp4"
+            controls
+            className="demo-video"
+          />
+        </div>
+
         <div className="project-screenshots">
           <h3>Screenshots</h3>
           <div className="screenshots-grid">
