@@ -105,12 +105,20 @@ export default function ProjectInfo() {
 
         <div className="project-footer">
           <a
-            href="https://github.com"
+            href="https://github.com/maia090607/-dreamscapes-3d"
             target="_blank"
             rel="noopener noreferrer"
             className="project-link"
           >
             View Source Code
+          </a>
+          <a
+            href="https://dreamscapes-3d.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            Live Demo
           </a>
         </div>
       </div>
