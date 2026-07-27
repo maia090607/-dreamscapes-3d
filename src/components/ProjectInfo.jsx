@@ -75,11 +75,14 @@ export default function ProjectInfo() {
 
         <div className="project-video">
           <h3>Demo Video</h3>
-          <video
-            src="/video/demo.mp4"
-            controls
-            className="demo-video"
-          />
+          <a
+            href="/video/demo.mp4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            Watch Demo Video
+          </a>
         </div>
 
         <div className="project-screenshots">
