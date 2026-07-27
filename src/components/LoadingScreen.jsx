@@ -1,7 +1,10 @@
 import { Html, useProgress } from '@react-three/drei'
+import { useLanguage } from '../context/LanguageContext'
+import { t } from '../utils/translations'
 
 export default function LoadingScreen() {
-  const { progress, active } = useProgress()
+  const { lang } = useLanguage()
+  const { progress } = useProgress()
   const loaded = progress === 100
 
   return (
@@ -61,7 +64,7 @@ export default function LoadingScreen() {
             textTransform: 'uppercase',
           }}
         >
-          Loading...
+          {t(lang, 'loading')}
         </div>
       </div>
     </Html>
