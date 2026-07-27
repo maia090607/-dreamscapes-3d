@@ -1,4 +1,5 @@
 import { TECHNOLOGIES } from '../utils/constants'
+import DreamStats from './DreamStats'
 
 function TechBadge({ name, category }) {
   const categoryColors = {
@@ -10,6 +11,8 @@ function TechBadge({ name, category }) {
     Animation: '#ff6600',
     Camera: '#7b2ff7',
     Materials: '#f472b6',
+    Backend: '#22d3ee',
+    Platform: '#f59e0b',
   }
 
   return (
@@ -72,6 +75,8 @@ export default function ProjectInfo() {
             ))}
           </div>
         </div>
+
+        <DreamStats />
 
         <div className="project-video">
           <h3>Demo Video</h3>

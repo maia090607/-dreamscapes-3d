@@ -1,0 +1,15 @@
+{
+  "id": "record-visit-01",
+  "resource": "record-visit",
+  "actionables": [
+    {
+      "id": 1,
+      "mode": "QUERY",
+      "sql_query": {
+        "query": "INSERT INTO visits (world_name, rating, message, country, created_at) VALUES ($1, $2, $3, $4, $5)",
+        "parameters": ["world_name", "rating", "message", "country", "$DATETIME"]
+      }
+    }
+  ],
+  "returnables": ["id", "world_name", "rating", "created_at"]
+}

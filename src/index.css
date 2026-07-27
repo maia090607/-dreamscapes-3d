@@ -439,6 +439,41 @@ canvas {
   box-shadow: 0 4px 25px rgba(168, 85, 247, 0.15);
 }
 
+/* ─── Dream Stats (Sub0) ─── */
+
+.dream-stats {
+  margin-bottom: 36px;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+}
+
+.dream-stats .stat-total {
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dream-stats .stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.dream-stats .stat-row:last-child {
+  border-bottom: none;
+}
+
 /* ─── Responsive ─── */
 
 @media (max-width: 768px) {

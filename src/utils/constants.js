@@ -80,4 +80,6 @@ export const TECHNOLOGIES = [
   { name: 'Catmull-Rom Curves', category: 'Camera' },
   { name: 'MeshTransmissionMaterial', category: 'Materials' },
   { name: 'Bloom / CA', category: 'Effects' },
+  { name: 'LingoQL', category: 'Platform' },
+  { name: 'Sub0', category: 'Backend' },
 ]

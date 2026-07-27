@@ -1,0 +1,22 @@
+{
+  "id": "get-stats-01",
+  "resource": "get-stats",
+  "actionables": [
+    {
+      "id": 1,
+      "mode": "QUERY",
+      "sql_query": {
+        "query": "SELECT world_name, COUNT(*) as total_visits, ROUND(AVG(rating), 1) as avg_rating FROM visits GROUP BY world_name ORDER BY total_visits DESC"
+      }
+    },
+    {
+      "id": 2,
+      "depends_on": [1],
+      "mode": "QUERY",
+      "sql_query": {
+        "query": "SELECT COUNT(*) as grand_total FROM visits"
+      }
+    }
+  ],
+  "returnables": ["action_1", "action_2"]
+}
