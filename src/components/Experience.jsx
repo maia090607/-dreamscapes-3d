@@ -32,8 +32,8 @@ export default function Experience() {
       <ScrollOverlay scroll={scroll} />
 
       <Scroll html>
-        <div style={{ height: '700vh' }}>
-          <div style={{ height: '600vh' }} />
+        <div style={{ height: '800vh' }}>
+          <div style={{ height: '700vh' }} />
           <ProjectInfo />
         </div>
       </Scroll>

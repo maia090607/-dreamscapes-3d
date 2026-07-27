@@ -14,7 +14,7 @@ export default function App() {
       dpr={[1, 2]}
       style={{ position: 'fixed', inset: 0 }}
     >
-      <ScrollControls pages={7} damping={0.25}>
+      <ScrollControls pages={8} damping={0.25}>
         <Experience />
       </ScrollControls>
     </Canvas>

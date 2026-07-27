@@ -21,7 +21,7 @@ export default function CameraController({ scroll }) {
     const pos = cameraPath.getPoint(t)
     const target = lookPath.getPoint(t)
 
-    camera.position.lerp(pos, 0.12)
+    camera.position.lerp(pos, 0.15)
     camera.lookAt(target)
   })
 
